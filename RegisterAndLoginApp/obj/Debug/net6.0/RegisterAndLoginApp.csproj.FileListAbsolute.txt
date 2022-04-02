@@ -230,3 +230,9 @@ C:\Dev\CST-350\CST-350\RegisterAndLoginApp\obj\Debug\net6.0\refint\RegisterAndLo
 C:\Dev\CST-350\CST-350\RegisterAndLoginApp\obj\Debug\net6.0\RegisterAndLoginApp.pdb
 C:\Dev\CST-350\CST-350\RegisterAndLoginApp\obj\Debug\net6.0\RegisterAndLoginApp.genruntimeconfig.cache
 C:\Dev\CST-350\CST-350\RegisterAndLoginApp\obj\Debug\net6.0\ref\RegisterAndLoginApp.dll
+C:\Dev\CST-350\CST-350\RegisterAndLoginApp\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Dev\CST-350\CST-350\RegisterAndLoginApp\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Dev\CST-350\CST-350\RegisterAndLoginApp\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Dev\CST-350\CST-350\RegisterAndLoginApp\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Dev\CST-350\CST-350\RegisterAndLoginApp\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Dev\CST-350\CST-350\RegisterAndLoginApp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
