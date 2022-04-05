@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GbcW94swDwIWTwDELSP+VR6dT8LbVSRSLc3JLU2gOSM=",
+  "Hash": "vMjLPk+AA8pSUxAXpxWPjUGEw+jZ/B34b7AfjuHvgjw=",
   "Source": "ASPCoreFirstApp",
   "BasePath": "_content/ASPCoreFirstApp",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Identity": "C:\\Dev\\CST-350\\CST-350\\ASPCoreFirstApp\\ASPCoreFirstApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.BK.css",
+      "SourceId": "ASPCoreFirstApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\CST-350\\CST-350\\ASPCoreFirstApp\\ASPCoreFirstApp\\wwwroot\\",
+      "BasePath": "_content/ASPCoreFirstApp",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.BK.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.BK.css"
     },
     {
       "Identity": "C:\\Dev\\CST-350\\CST-350\\ASPCoreFirstApp\\ASPCoreFirstApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
