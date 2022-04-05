@@ -29,6 +29,11 @@ namespace ASPCoreFirstApp.Controllers
             return View("Index", productList);
         }
 
+        public IActionResult SearchForm()
+        {
+            return View();
+        }
+
         public IActionResult Message()
         {
             return View();
