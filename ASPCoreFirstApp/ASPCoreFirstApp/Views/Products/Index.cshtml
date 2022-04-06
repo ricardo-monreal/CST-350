@@ -24,7 +24,10 @@
                 <p class="card-text"> @Html.DisplayFor(modelItem => item.Price)</p>
                 <a href="/products/ShowOneProduct/@item.Id" class="btn btn-primary">Show Details</a>
                 <a href="/products/ShowEditForm/@item.Id" class="btn btn-warning">Edit</a>
-                <a class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id=item.Id  })</a>
+                <!-- Delete Challenge-->
+                <a href="/products/Delete/@item.Id" class="btn btn-danger">Delete</a>
+              
+                 
             </div>
         </div>
 

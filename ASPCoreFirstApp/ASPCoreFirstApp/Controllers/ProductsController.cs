@@ -62,6 +62,8 @@ namespace ASPCoreFirstApp.Controllers
             return View("Index", repository.AllProducts());
         }
 
+
+        // coding challenge
         public IActionResult Delete(int Id)
         {
             ProductsDAO productsDAO = new ProductsDAO();
