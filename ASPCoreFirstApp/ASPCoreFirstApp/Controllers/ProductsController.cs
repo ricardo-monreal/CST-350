@@ -45,5 +45,31 @@ namespace ASPCoreFirstApp.Controllers
             ViewBag.secretNumber = 13;
             return View();
         }
+
+        public IActionResult ShowOneProduct(int Id)
+        {
+            return View(repository.GetProductById(Id));
+        }
+
+        public IActionResult ShowEditForm(int Id)
+        {
+            return View(repository.GetProductById(Id));
+        }
+
+        public IActionResult ProcessEdit(ProductModel product)
+        {
+            repository.Update(product);
+            return View("Index", repository.AllProducts());
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            ProductsDAO productsDAO = new ProductsDAO();
+            productsDAO.Delete(Id);
+
+            List<ProductModel> products = productsDAO.AllProducts();
+            
+            return View("Index", products);
+        }
     }
 }
