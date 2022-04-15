@@ -51,6 +51,11 @@ namespace ASPCoreFirstApp.Controllers
             return View(repository.GetProductById(Id));
         }
 
+        public IActionResult ShowOneProductJSON(int Id)
+        {
+            return Json(repository.GetProductById(Id));
+        }
+
         public IActionResult ShowEditForm(int Id)
         {
             return View(repository.GetProductById(Id));
@@ -60,6 +65,12 @@ namespace ASPCoreFirstApp.Controllers
         {
             repository.Update(product);
             return View("Index", repository.AllProducts());
+        }
+
+        public IActionResult ProcessEditReturnPartial(ProductModel product)
+        {
+            repository.Update(product);
+            return PartialView("_productCard", product);
         }
 
 
