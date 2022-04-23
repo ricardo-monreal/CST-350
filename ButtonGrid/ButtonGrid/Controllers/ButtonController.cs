@@ -31,6 +31,7 @@ namespace ButtonGrid.Controllers
             // convert from string to int
             int bn = int.Parse(buttonNumber);
 
+            // add one to the button state. if greater than 4, reset to 0.
             buttons.ElementAt(bn).ButtonState = (buttons.ElementAt(bn).ButtonState + 1) % 4;
 
             return View("Index", buttons);
@@ -38,12 +39,19 @@ namespace ButtonGrid.Controllers
 
         public IActionResult ShowOneButton(int buttonNumber)
         {
-            // add one to the button state. if > 4, then reset to 0
+            // add one to the button state. if greater 4, then reset to 0
             buttons.ElementAt(buttonNumber).ButtonState = (buttons.ElementAt(buttonNumber).ButtonState + 1) % 4;
 
+            // re-display the button that was clicked
             return PartialView(buttons.ElementAt(buttonNumber));
         }
 
+        public IActionResult RightClickShowOneButton(int buttonNumber)
+        {
+            buttons.ElementAt(buttonNumber).ButtonState = 0;
+            // re-display the button that was clicked
+            return PartialView("ShowOneButton", buttons.ElementAt(buttonNumber));
+        }
 
 
     }

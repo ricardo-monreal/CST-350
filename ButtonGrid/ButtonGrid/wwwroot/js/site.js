@@ -5,21 +5,62 @@
 $(function () {
     console.log("Page is ready");
 
-    $(document).on("click", ".game-button", function (event) {
-        event.preventDefault();
+    // this works for all .game-button elements that were initially loaded
+    // but will not be bound to any dynamically created buttons.    
+    //$(".game-button").click(function (event) {
 
-        var buttonNumber = $(this).val();
+    // this works for any .game-button elements found on the document,
+    // even if they were dynamically created. 
+    // the click listener is attached to the document (ie. the body of the page)
 
-        console.log("button " + buttonNumber + " was clicked")
+    //$(document).on("click", ".game-button", function (event) {
+    //    event.preventDefault();
 
-        doButtonUpdate(buttonNumber);
+    //    var buttonNumber = $(this).val();
+
+    //    console.log("button " + buttonNumber + " was clicked")
+
+    //    doButtonUpdate(buttonNumber);
+    //})
+
+    // ________________________________ Activity 5 _______________________________
+
+    $(document).bind("contextmenu", function (e) {
+        e.preventDefault();
+        console.log("Right click, Prevent context menu from showing")
+    });
+
+
+    $(document).on("mousedown", ".game-button", function (event) {
+
+        switch (event.which) {
+            case 1:
+                event.preventDefault();
+                var buttonNumber = $(this).val();
+                console.log("Button number " + buttonNumber + " was left clicked");
+                doButtonUpdate(buttonNumber, '/button/ShowOneButton');
+                break;
+            case 2:
+                alert('Middle mouse button is pressed');
+                break;
+            case 3:
+                event.preventDefault();
+                var buttonNumber = $(this).val();
+                console.log("Button number " + buttonNumber + " was right clicked");
+                doButtonUpdate(buttonNumber, '/button/RightClickShowOneButton');
+                break;
+            default:
+                alert('Nothing');
+        }
     })
 
-    function doButtonUpdate(buttonNumber) {
+
+
+    function doButtonUpdate(buttonNumber, urlString) {
         $.ajax({
-            type: "json",
+            datatype: "json",
             method: 'POST',
-            url: '/button/ShowOneButton',
+            url: urlString,
             data: {
                 "buttonNumber": buttonNumber
             },

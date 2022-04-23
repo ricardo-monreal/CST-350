@@ -26,6 +26,7 @@
 
 @{
     string[] imagenames = { "blue_button.png", "green_button.png", "purple_button.png", "orange_button.png" };
+    bool allMatch = true;
 }
 
 <p>Current Time: @DateTime.Now</p>
@@ -33,8 +34,13 @@
     <div class="button-zone">
         @for (int i = 0; i < Model.Count(); i++)
         {
+            @if(Model.ElementAt(0).ButtonState != Model.ElementAt(i).ButtonState)
+            {
+                allMatch = false;
+            }
+
             // start a new line every five elements
-            if (i % 5 == 0)
+            @if (i % 5 == 0)
             {
                 <div class="line-break"></div>
             }
@@ -45,7 +51,9 @@
                     <img class="game-button-image" src="~/img/@imagenames[Model.ElementAt(i).ButtonState]" />
 
                     <div class="button-label">
-                        @Model.ElementAt(i).Id, @Model.ElementAt(i).ButtonState
+                        @Model.ElementAt(i).Id
+                        , 
+                        @Model.ElementAt(i).ButtonState
                     </div>
                 </button>
 
@@ -55,3 +63,12 @@
         }
     </div>
 </form>
+
+@if (allMatch)
+{
+    <p>Congratulations. All the buttons match.</p>
+}
+else
+{
+    <p>Not all the buttons are the same color. See if you can make them all match.</p>
+}
