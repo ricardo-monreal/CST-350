@@ -67,7 +67,7 @@ namespace ASPCoreFirstApp.Controllers
             return View("Index", repository.AllProducts());
         }
 
-        public IActionResult ProcessEditReturnPartial(ProductModel product)
+        public IActionResult ProcessEditReturnOneItem(ProductModel product)
         {
             repository.Update(product);
             return PartialView("_productCard", product);
