@@ -8,17 +8,24 @@ namespace ASPCoreFirstApp.Controllers
 {
     public class ProductsController : Controller
     {
+        //HardCodedSampleDataRepository repository = new HardCodedSampleDataRepository();
+        //ProductsDAO repository = new ProductsDAO();
 
-        ProductsDAO repository = new ProductsDAO();
+        // use dependency injection, see Program.cs to see the data source for the repository.
+        public IProductDataService repository { get; set; }
 
-        public ProductsController()
+
+
+        public ProductsController(IProductDataService dataService)
         {
-            repository = new ProductsDAO();
+            //repository = new ProductsDAO();
+            repository = dataService;
+            //repository = new HardCodedSampleDataRepository();
         }
 
         public IActionResult Index()
         {
-            //HardCodedSampleDataRepository repository = new HardCodedSampleDataRepository();
+            
             return View(repository.AllProducts());
         }
 
