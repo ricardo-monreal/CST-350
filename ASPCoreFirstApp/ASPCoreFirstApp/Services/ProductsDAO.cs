@@ -1,4 +1,5 @@
 ﻿using ASPCoreFirstApp.Models;
+using MySqlConnector;
 using System.Data.SqlClient;
 
 namespace ASPCoreFirstApp.Services
@@ -7,6 +8,10 @@ namespace ASPCoreFirstApp.Services
     {
         //connection to logal db
         string connectionString = @"Data Source=(localdb)\ProjectModels;Initial Catalog=Test;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+        //string connectionString = @"server=127.0.0.1;uid=root;pwd=root;database=test";
+
+
 
         public List<ProductModel> AllProducts()
         {

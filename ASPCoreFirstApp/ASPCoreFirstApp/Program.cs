@@ -7,7 +7,7 @@ builder.Services.AddControllersWithViews();
 
 
 // repository data source
-builder.Services.AddTransient<IProductDataService, HardCodedSampleDataRepository>();
+builder.Services.AddTransient<IProductDataService, ProductsDAO>();
 
 var app = builder.Build();
 

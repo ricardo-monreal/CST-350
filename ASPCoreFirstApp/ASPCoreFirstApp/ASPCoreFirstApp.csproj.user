@@ -10,5 +10,6 @@
     <WebStackScaffolding_IsPartialViewSelected>True</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>False</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
+    <NameOfLastUsedPublishProfile>C:\Dev\CST-350\CST-350\ASPCoreFirstApp\ASPCoreFirstApp\Properties\PublishProfiles\CST350-Azure - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
